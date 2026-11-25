@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Sholat Diary</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #eaf7f5;
+            color: #315e5b;
+        }
+
+        header {
+            background: linear-gradient(135deg, #65c6ba, #318f91);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            border-radius: 0 0 30px 30px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        header p {
+            margin-bottom: 0;
+        }
+
+        main {
+            max-width: 850px;
+            margin: 25px auto;
+            padding: 0 16px;
+        }
+
+        .welcome {
+            background: white;
+            padding: 22px;
+            border-radius: 18px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 12px #b7dcd5;
+        }
+
+        .welcome h2 {
+            color: #318f91;
+            margin-top: 0;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .card {
+            background: white;
+            padding: 22px;
+            border-radius: 18px;
+            text-align: center;
+            box-shadow: 0 4px 12px #b7dcd5;
+        }
+
+        .card h3 {
+            color: #318f91;
+            margin-bottom: 8px;
+        }
+
+        .card p {
+            font-size: 14px;
+        }
+
+        .menu {
+            margin-top: 22px;
+            background: white;
+            padding: 20px;
+            border-radius: 18px;
+        }
+
+        .menu h2 {
+            color: #318f91;
+        }
+
+        button {
+            background: #55b5aa;
+            color: white;
+            border: none;
+            padding: 12px 18px;
+            border-radius: 12px;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        button:hover {
+            background: #318f91;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #648b85;
+            font-size: 13px;
+        }
+
+        @media (max-width: 500px) {
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+.pengingat,
+.pengingat-utama,
+.pengingat-kecil {
+    text-align: center;
+}
+
+.pengingat {
+    color: #5caaa5;
+    font-size: 14px;
+}
+
+.pengingat-utama {
+    color: #318f91;
+    font-size: 27px;
+    margin: 12px 0;
+}
+
+.pengingat-kecil {
+    color: #648b8a;
+    font-size: 15px;
+}    
+/* MODERN OCEAN DASHBOARD */
+
+body {
+    background: linear-gradient(135deg, #edf8f7, #e8f1fa);
+    font-family: Arial, sans-serif;
+    color: #315e65;
+}
+
+header {
+    background: linear-gradient(135deg, #278f91, #55bdb1);
+    box-shadow: 0 8px 25px rgba(39, 143, 145, 0.2);
+    border-radius: 0 0 28px 28px;
+}
+
+section {
+    border-radius: 22px;
+    transition: 0.3s ease;
+}
+
+.menu, .dashboard-card {
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid #e1efed;
+    border-radius: 20px;
+    padding: 24px;
+    margin: 18px auto;
+    box-shadow: 0 8px 25px rgba(55, 110, 115, 0.08);
+}
+
+button {
+    background: linear-gradient(135deg, #319b9b, #62c3b5);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(49, 155, 155, 0.2);
+}
+
+input, select {
+    border: 1px solid #c8e3df;
+    border-radius: 10px;
+    padding: 10px;
+    background: #f8fcfb;
+}
+.navigasi {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 18px;
+    margin: 15px auto;
+}
+
+.navigasi a {
+    text-decoration: none;
+    color: #287f78;
+    background: white;
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(49, 143, 145, 0.12);
+    transition: 0.3s;
+}
+
+.navigasi a:hover {
+    background: #319b9b;
+    color: white;
+    transform: translateY(-3px);
+}
+
+@media (max-width: 600px) {
+    .navigasi a {
+        padding: 10px 12px;
+        font-size: 12px;
+    }
+}
+/* MODERN REPORT CARD */
+
+#hasilLaporanHarian {
+    background: #f0f9f8;
+    border: 1px solid #d8eeea;
+    border-radius: 18px;
+    padding: 20px;
+    margin-top: 18px;
+    color: #315e65;
+    line-height: 1.8;
+}
+
+#hasilLaporanHarian h3 {
+    color: #278f91;
+    text-align: center;
+}
+
+#hasilLaporanHarian h4 {
+    background: #dff3ef;
+    padding: 12px;
+    border-radius: 12px;
+    color: #287f78;
+}
+</style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🌊 Our Sholat Diary 🐚</h1>
+        <p>A peaceful day, a grateful heart.</p>
+    </header>
+<nav class="navigasi">
+    <a href="#beranda">🏠 Beranda</a>
+    <a href="#catatan">🕌 Catatan Sholat</a>
+    <a href="#bagian-anggota">👨‍👩‍👧‍👦 Anggota</a>
+    <a href="#laporan">📊 Laporan</a>
+</nav>
+<p class="pengingat">
+    بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
+</p>
+
+<h2 class="pengingat-utama">
+    Allah Maha Melihat
+</h2>
+
+<p class="pengingat-kecil">
+    Setiap langkah ibadah kita diketahui oleh-Nya.
+</p>
+    <main>
+
+        <section id="beranda"class="welcome">
+            <h2>Assalamu'alaikum!</h2>
+            <p>Selamat datang di diary ibadah keluarga kita.</p>
+            <p>Mari belajar menjaga sholat dan memperbaiki diri setiap hari. 🤍</p>
+        </section>
+
+        <section class="cards">
+
+            <div class="card">
+                <h3>👨‍👩‍👧‍👦</h3>
+                <h2>4 Anggota</h2>
+                <p>Keluarga kita</p>
+            </div>
+
+            <div class="card">
+                <h3>🕌</h3>
+                <h2>5 Waktu</h2>
+                <p>Sholat wajib</p>
+            </div>
+
+        </section>
+
+        <section class="menu">
+            <h2>📖 Menu Diary</h2>
+            <button>Catatan Harian</button>
+            <button>Laporan Mingguan</button>
+            <button>Laporan Bulanan</button>
+        </section>
+
+    </main>
+
+    <footer>
+        Made with love for our family 🌊
+        <br>
+        Our Sholat Diary © 2026
+    </footer>
+
+<section id="bagian-anggota"class="menu">
+    <h2>👨‍👩‍👧‍👦 Anggota Keluarga</h2>
+
+    <label for="anggota">Pilih nama anggota:</label>
+
+    <select id="anggota">
+        <option value="">-- Pilih Nama --</option>
+        <option value="Bunda">Bunda</option>
+        <option value="Jihan">Jihan</option>
+        <option value="Nafish">Nafish</option>
+        <option value="Putri">Putri</option>
+    </select>
+</section>
+<section id="catatan"class"menu">
+    <h2>🕌 Catatan Sholat Harian</h2>
+
+    <label for="tanggal">Pilih tanggal:</label>
+    <input type="date" id="tanggal">
+
+    <br><br>
+
+    <label for="status">Status hari ini:</label>
+    <select id="status" onchange="ubahStatus()">
+        <option value="normal">Beribadah seperti biasa</option>
+        <option value="haid">Sedang haid</option>
+        <option value="halangan">Berhalangan lainnya</option>
+    </select>
+
+    <div id="daftarSholat">
+        <h3>Checklist Sholat</h3>
+
+        <label><input type="checkbox"> Subuh</label><br>
+        <label><input type="checkbox"> Zuhur</label><br>
+        <label><input type="checkbox"> Asar</label><br>
+        <label><input type="checkbox"> Magrib</label><br>
+        <label><input type="checkbox"> Isya</label>
+    </div>
+
+    <p id="pesanStatus"></p>
+
+<button onclick="simpanCatatan()">
+    💾 Simpan Catatan
+</button>
+
+<p id="hasilSimpan"></p>
+</section>
+<script>
+function ubahStatus() {
+    const status = document.getElementById("status").value;
+    const daftar = document.getElementById("daftarSholat");
+    const pesan = document.getElementById("pesanStatus");
+
+    if (status === "normal") {
+        daftar.style.display = "block";
+        pesan.textContent = "";
+    } else if (status === "haid") {
+        daftar.style.display = "none";
+        pesan.textContent = "🌙 Status sedang haid.";
+    } else {
+        daftar.style.display = "none";
+        pesan.textContent = "🌿 Status berhalangan lainnya.";
+    }
+}function simpanCatatan() {
+    const anggota = document.getElementById("anggota").value;
+    const tanggal = document.getElementById("tanggal").value;
+    const status = document.getElementById("status").value;
+
+    if (!anggota || !tanggal) {
+        alert("Pilih nama anggota dan tanggal terlebih dahulu!");
+        return;
+    }
+
+    const checklist = [];
+
+    document.querySelectorAll(
+        "#daftarSholat input[type='checkbox']"
+    ).forEach((kotak) => {
+        checklist.push(kotak.checked);
+    });
+
+    const catatan = {
+        anggota: anggota,
+        tanggal: tanggal,
+        status: status,
+        checklist: checklist
+    };
+
+    const kunci = "catatan_" + anggota + "_" + tanggal;
+
+    localStorage.setItem(kunci, JSON.stringify(catatan));
+
+    document.getElementById("hasilSimpan").textContent =
+        "✅ Catatan berhasil disimpan!";
+}
+function muatCatatan() {
+    const anggota = document.getElementById("anggota").value;
+    const tanggal = document.getElementById("tanggal").value;
+
+    if (!anggota || !tanggal) return;
+
+    const kunci = "catatan_" + anggota + "_" + tanggal;
+    const data = JSON.parse(localStorage.getItem(kunci));
+
+    const kotak = document.querySelectorAll(
+        "#daftarSholat input[type='checkbox']"
+    );
+
+    if (!data) {
+        document.getElementById("status").value = "normal";
+        ubahStatus();
+
+        kotak.forEach(item => item.checked = false);
+        document.getElementById("hasilSimpan").textContent = "";
+        return;
+    }
+
+    document.getElementById("status").value = data.status;
+    ubahStatus();
+
+    kotak.forEach((item, index) => {
+        item.checked = data.checklist[index] || false;
+    });
+
+    document.getElementById("hasilSimpan").textContent =
+        "✅ Catatan sebelumnya berhasil dimuat!";
+}
+
+document.getElementById("anggota").addEventListener("change", muatCatatan);
+document.getElementById("tanggal").addEventListener("change", muatCatatan);
+</script>
+<section id="laporan"class"menu">
+    <h2>📊 Laporan Harian</h2>
+
+    <label for="tanggalLaporan">Pilih tanggal laporan:</label>
+    <input type="date" id="tanggalLaporan">
+
+    <button onclick="buatLaporanHarian()">
+        Lihat Laporan
+    </button>
+
+    <div id="hasilLaporanHarian"></div>
+</section>
+<section class="menu">
+    <h2>📅 Laporan Mingguan</h2>
+
+    <label for="tanggalMingguan">
+        Pilih tanggal dalam minggu tersebut:
+    </label>
+
+    <input type="date" id="tanggalMingguan">
+
+    <button onclick="buatLaporanMingguan()">
+        Lihat Laporan Mingguan
+    </button>
+
+    <div id="hasilLaporanMingguan"></div>
+</section>
+<section class="menu">
+    <h2>🗓️ Laporan Bulanan</h2>
+
+    <label for="tanggalBulanan">
+        Pilih bulan:
+    </label>
+
+    <input type="month" id="tanggalBulanan">
+
+    <button onclick="buatLaporanBulanan()">
+        Lihat Laporan Bulanan
+    </button>
+
+    <div id="hasilLaporanBulanan"></div>
+</section>
+<script>
+function buatLaporanHarian() {
+    const tanggal = document.getElementById("tanggalLaporan").value;
+    const anggota = ["Bunda", "Jihan", "Nafish", "Putri"];
+    const hasil = document.getElementById("hasilLaporanHarian");
+
+    if (!tanggal) {
+        alert("Pilih tanggal laporan dahulu!");
+        return;
+    }
+
+    let laporan = "<h3>Laporan Keluarga</h3>";
+    let totalCentang = 0;
+    let totalhari = 0;
+
+    anggota.forEach(nama => {
+        const kunci = "catatan_" + nama + "_" + tanggal;
+        const data = JSON.parse(localStorage.getItem(kunci));
+
+        laporan += "<h4>" + nama + "</h4>";
+
+        if (!data) {
+            laporan += "<p>Belum ada catatan.</p>";
+        } else if (data.status === "haid") {
+            laporan += "<p>🌙 Sedang haid</p>";
+        } else if (data.status === "halangan") {
+            laporan += "<p>🌿 Berhalangan lainnya</p>";
+        } else {
+            totalhari += 5;
+            let centangAnggota = 0;
+
+            const sholat = ["Subuh", "Zuhur", "Asar", "Magrib", "Isya"];
+
+            sholat.forEach((namaSholat, index) => {
+                if (data.checklist[index]) {
+                    totalCentang++;
+                    centangAnggota++;
+                }
+
+                laporan += "<p>" + namaSholat + ": " +
+                    (data.checklist[index] ? "✅" : "Belum dicentang") +
+                    "</p>";
+            });
+
+            const persenAnggota = Math.round((centangAnggota / 5) * 100);
+
+            laporan += "<p>🌊 Progress " + nama + ": " +
+                persenAnggota + "%</p>";
+        }
+     });
+
+    const persen = totalhari === 0
+        ? 0
+        : Math.round((totalCentang / totalhari) * 100);
+
+    laporan += `
+        <h3>🌊 Progress Ibadah Keluarga</h3>
+<p style="color:#438b83; font-weight:bold;">
+    ${persen < 26 ? "🌱 Yuk mulai semangat!" :
+    persen < 51 ? "🌊 Terus semangat beribadah!" :
+    persen < 76 ? "✨ Makin konsisten!" :
+    "🏆 Alhamdulillah, luar biasa!"}
+</p>        
+<h2 style="font-size:32px; color:#268b83; margin:10px 0;">
+          ${persen}%
+        </h2>
+        <div style="background:#dcefeb; border-radius:20px; height:16px; overflow:hidden;">
+    <div style="background:linear-gradient(90deg,#319b9b,#64c9bb); width:${persen}%; height:16px; border-radius:20px; transition:width 1s ease;"></div>
+</div>      
+  <p>${totalCentang} dari ${totalhari} checklist sholat</p>
+    `;
+
+    hasil.innerHTML = laporan;
+}
+</script>
+<script>
+function buatLaporanMingguan() {
+    const pilihan = document.getElementById("tanggalMingguan").value;
+    const hasil = document.getElementById("hasilLaporanMingguan");
+
+    if (!pilihan) {
+        alert("Pilih tanggal terlebih dahulu!");
+        return;
+    }
+
+    const awal = new Date(pilihan + "T00:00:00");
+    const hari = awal.getDay();
+    const selisih = hari === 0 ? -6 : 1 - hari;
+
+    awal.setDate(awal.getDate() + selisih);
+
+    const anggota = ["Bunda", "Jihan", "Nafish", "Putri"];
+    const sholat = ["Subuh", "Zuhur", "Asar", "Magrib", "Isya"];
+
+    let laporan = "<h3>Laporan Senin - Minggu</h3>";
+let totalCentang = 0;
+let totalhari = 0
+    anggota.forEach(nama => {
+        laporan += "<h4>" + nama + "</h4>";
+
+        let totalCentang = 0;
+        let totalhari = 0;
+        let jumlahHaid = 0;
+        let jumlahHalangan = 0;
+
+        for (let i = 0; i < 7; i++) {
+            const tanggal = new Date(awal);
+            tanggal.setDate(awal.getDate() + i);
+
+            const tahun = tanggal.getFullYear();
+            const bulan = String(tanggal.getMonth() + 1).padStart(2, "0");
+            const hariIni = String(tanggal.getDate()).padStart(2, "0");
+
+            const formatTanggal = tahun + "-" + bulan + "-" + hariIni;
+            const data = JSON.parse(
+                localStorage.getItem("catatan_" + nama + "_" + formatTanggal)
+            );
+
+            if (!data) continue;
+
+            totalhari++;
+
+            if (data.status === "haid") {
+                jumlahHaid++;
+            } else if (data.status === "halangan") {
+                jumlahHalangan++;
+            } else {
+                totalCentang += data.checklist.filter(Boolean).length;
+            }
+        }
+
+        laporan += "<p>Catatan tersimpan: " + totalhari + " hari</p>";
+        laporan += "<p>Sholat dicentang: " + totalCentang + " kali</p>";
+        laporan += "<p>Status haid: " + jumlahHaid + " hari</p>";
+        laporan += "<p>Berhalangan lainnya: " + jumlahHalangan + " hari</p>";
+    });
+
+    hasil.innerHTML = laporan;
+}
+</script>
+<script>
+function buatLaporanBulanan() {
+    const pilihan = document.getElementById("tanggalBulanan").value;
+    const hasil = document.getElementById("hasilLaporanBulanan");
+
+    if (!pilihan) {
+        alert("Pilih bulan terlebih dahulu!");
+        return;
+    }
+
+    const [tahun, bulan] = pilihan.split("-").map(Number);
+    const jumlahHari = new Date(tahun, bulan, 0).getDate();
+
+    const anggota = ["Bunda", "Jihan", "Nafish", "Putri"];
+    let laporan = "<h3>Rekap Bulanan</h3>";
+
+    anggota.forEach(nama => {
+        let totalhari = 0;
+        let totalSholat = 0;
+        let totalHaid = 0;
+        let totalHalangan = 0;
+
+        for (let hari = 1; hari <= jumlahHari; hari++) {
+            const tanggal = tahun + "-" +
+                String(bulan).padStart(2, "0") + "-" +
+                String(hari).padStart(2, "0");
+
+            const data = JSON.parse(
+                localStorage.getItem("catatan_" + nama + "_" + tanggal)
+            );
+
+            if (!data) continue;
+
+            totalhari++;
+
+            if (data.status === "haid") {
+                totalHaid++;
+            } else if (data.status === "halangan") {
+                totalHalangan++;
+            } else {
+                totalSholat += data.checklist.filter(Boolean).length;
+            }
+        }
+
+        laporan += "<h4>" + nama + "</h4>";
+        laporan += "<p>Catatan tersimpan: " + totalhari + " hari</p>";
+        laporan += "<p>Sholat dicentang: " + totalSholat + " kali</p>";
+        laporan += "<p>Status haid: " + totalHaid + " hari</p>";
+        laporan += "<p>Berhalangan lainnya: " + totalHalangan + " hari</p>";
+    });
+
+    hasil.innerHTML = laporan;
+}
+</script>
+</body>
+</html>
